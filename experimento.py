@@ -3,11 +3,9 @@ import matplotlib.pyplot as plt
 import matplotlib.dates as mdates
 import seaborn as sns
 
-from functools import reduce
-
 datasets = [
     'ethereum',
-    'ethereum-mainnet-us',
+    # 'ethereum-mainnet-us',
     'bitcoin'
     ]
 dataframes = []

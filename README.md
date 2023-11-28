@@ -37,6 +37,17 @@ GROUP BY timestamp1
 ORDER BY timestamp1
 ; 
 
+-- Ethereum Mainnet Dataset
+SELECT
+  TIMESTAMP_TRUNC(block_timestamp, DAY) AS timestamp1, COUNT(1) AS txn_count
+FROM
+  bigquery-public-data.goog_blockchain_ethereum_mainnet_us.transactions
+WHERE
+  block_timestamp BETWEEN CAST('2015-08-01 00:00:00+00' AS TIMESTAMP) AND CAST('2023-11-23 18:00:00+00' AS TIMESTAMP)
+GROUP BY timestamp1
+ORDER BY timestamp1
+;
+
 -- Contagem de Transações no Bitcoin por dia
 SELECT
   TIMESTAMP_TRUNC(block_timestamp, DAY) AS timestamp1, COUNT(1) AS txn_count
@@ -47,6 +58,41 @@ WHERE
 GROUP BY timestamp1
 ORDER BY timestamp1
 ;
+
+-- Dados até 2019, mais próximo do período do artigo
+-- Contagem de Transações no Ethereum por dia
+SELECT
+  TIMESTAMP_TRUNC(block_timestamp, DAY) AS timestamp1, COUNT(1) AS txn_count
+FROM
+  bigquery-public-data.crypto_ethereum.transactions
+WHERE
+  block_timestamp BETWEEN CAST('2015-08-01 00:00:00+00' AS TIMESTAMP) AND CAST('2019-12-01 18:00:00+00' AS TIMESTAMP)
+GROUP BY timestamp1
+ORDER BY timestamp1
+; 
+
+-- Ethereum Mainnet Dataset
+SELECT
+  TIMESTAMP_TRUNC(block_timestamp, DAY) AS timestamp1, COUNT(1) AS txn_count
+FROM
+  bigquery-public-data.goog_blockchain_ethereum_mainnet_us.transactions
+WHERE
+  block_timestamp BETWEEN CAST('2015-08-01 00:00:00+00' AS TIMESTAMP) AND CAST('2019-12-01 18:00:00+00' AS TIMESTAMP)
+GROUP BY timestamp1
+ORDER BY timestamp1
+;
+
+-- Contagem de Transações no Bitcoin por dia
+SELECT
+  TIMESTAMP_TRUNC(block_timestamp, DAY) AS timestamp1, COUNT(1) AS txn_count
+FROM
+  bigquery-public-data.crypto_bitcoin.transactions
+WHERE
+  block_timestamp BETWEEN CAST('2015-08-01 00:00:00+00' AS TIMESTAMP) AND CAST('2019-12-01 18:00:00+00' AS TIMESTAMP)
+GROUP BY timestamp1
+ORDER BY timestamp1
+;
+
 ```
 
 # Rodando o experimento
