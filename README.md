@@ -97,6 +97,7 @@ ORDER BY timestamp1
 
 # Rodando o experimento
 1. Escolha quais CSVs deseja utilizar. Comente e descomente os elementos em `datasets`.
+  1.1 Colocar um `2019` na frente de `transactions`, na linha 15, monta um gráfico com o período mais próximo daquele no artigo.
 2. Execute `experimento.py` chamando `python ./experimento.py` ou use seu editor.
 3. O resultado esperado é um gráfico com o número de transações diárias de cada dataset.
 
