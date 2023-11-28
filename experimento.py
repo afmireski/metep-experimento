@@ -12,7 +12,7 @@ dataframes = []
 
 # Read BigQuery CSV data
 for dataset in datasets:
-    df = pd.read_csv(f'data/{dataset}-transactions.csv', index_col=0, parse_dates=True)
+    df = pd.read_csv(f'data/{dataset}-transactions2019.csv', index_col=0, parse_dates=True)
     df['dataset'] = dataset; # Adiciona uma nova coluna com o nome do dataset em cada linha
     dataframes.append(df) 
 

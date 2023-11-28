@@ -1,7 +1,7 @@
 # Instalando dependências
 - [Instalar o pandas](https://pandas.pydata.org/docs/getting_started/install.html)
 - [Instalar o matplotlib](https://matplotlib.org/stable/users/installing/index.html)
-- [Instalar o seaborn](https://matplotlib.org/stable/users/installing/index.html)
+- [Instalar o seaborn](https://seaborn.pydata.org/installing.html)
 ```bash
 # Arch
 sudo pacman -S python-pandas
@@ -20,7 +20,7 @@ pip install seaborn
 
 # Obtendo os dados
 Os gráficos são montados a partir do processamento de dois arquivos CSVs que contém o número de transações diárias das redes Ethereum e Bitcoin.
-Esses arquivos foram gerados a partir da consulta em datasets públicos com dados das duas redes disponíveis no Google BigQuery.
+Esses arquivos foram gerados a partir da consulta em datasets públicos com dados das duas redes disponíveis no [Google BigQuery](https://console.cloud.google.com/bigquery).
 No caso do Ethereum existem dois datasets, mas ambos geram o mesmo resultado, ou seja, são equivalentes.
 O intervalo de consulta dos dados é o que está na condição das queries abaixo.
 
@@ -104,4 +104,5 @@ ORDER BY timestamp1
 # Objetivos e conclusões
 O objetivo desse experimento é replicar o gráfico da figura 3, presente no artigo de ABDULLAH A. ZARIR et.al. Os autores em teoria utilizaram os mesmos datasets disponíveis no Google BigQuery para desenvolver sua tese.
 
-Porém o que observei foi uma grande discrepância no gráfico, para o mesmo período. Como os dados originais aparentemente não foram disponibilizados para os pesquisadores fica difícil saber se a discrepância se dá por conta de mudanças no dataset ou por falha minha.
+Porém o que observei foi uma grande discrepância no gráfico, para o mesmo período. Como os [dados originais](https://github.com/SAILResearch/suppmaterial-18-zarir-ethereum_gas_usage) utilizados pelos pesquisadores aparentemente não estão mais disponíveis fica difícil saber se a discrepância se dá por conta de mudanças no dataset ou por falha minha.
+Em 2021 o Ethereum trocou seu mecanismo de consenso de uma base Proof-of-Work para uma Proof-of-Stake, num evento conhecido como [The Merge](https://ethereum.org/pt/roadmap/merge/), talvez essa troca tenha tido algum efeito como causa da discrepância dos dados, mas é só uma especulação, seria necessário uma análise mais afundo para afirmar qualquer coisa.
