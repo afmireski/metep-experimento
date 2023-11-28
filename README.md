@@ -106,3 +106,6 @@ O objetivo desse experimento é replicar o gráfico da figura 3, presente no art
 
 Porém o que observei foi uma grande discrepância no gráfico, para o mesmo período. Como os [dados originais](https://github.com/SAILResearch/suppmaterial-18-zarir-ethereum_gas_usage) utilizados pelos pesquisadores aparentemente não estão mais disponíveis fica difícil saber se a discrepância se dá por conta de mudanças no dataset ou por falha minha.
 Em 2021 o Ethereum trocou seu mecanismo de consenso de uma base Proof-of-Work para uma Proof-of-Stake, num evento conhecido como [The Merge](https://ethereum.org/pt/roadmap/merge/), talvez essa troca tenha tido algum efeito como causa da discrepância dos dados, mas é só uma especulação, seria necessário uma análise mais afundo para afirmar qualquer coisa.
+
+# Extras
+- [Artigo](https://dl.acm.org/doi/10.1145/3431726)
